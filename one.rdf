@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:sioc="http://rdfs.org/sioc/ns#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:bibo="http://purl.org/ontology/bibo/"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+ xmlns:cc="http://creativecommons.org/ns#"
+ xmlns="http://eunis.eea.europa.eu/rdf/species-schema.rdf#" xml:base="http://eunis.eea.europa.eu/">
+
+<SpeciesSynonym rdf:about="species/1">
+ <speciesCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</speciesCode>
+ <foaf:isPrimaryTopicOf rdf:resource="species/1/general"/>
+ <binomialName>Aeschna flavipes</binomialName>
+ <validName rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</validName>
+ <eunisPrimaryName rdf:resource="species/152"/>
+ <synonymFor rdf:resource="species/152"/>
+ <taxonomicRank>Synonym</taxonomicRank>
+ <taxonomy rdf:resource="taxonomy/735"/>
+ <dwc:scientificNameAuthorship>Charpentier, 1825</dwc:scientificNameAuthorship>
+ <dwc:scientificName>Aeschna flavipes</dwc:scientificName>
+ <rdfs:label>Aeschna flavipes Charpentier, 1825</rdfs:label>
+ <dwc:genus>Aeschna</dwc:genus>
+ <speciesGroup rdf:resource="speciesgroup/1"/>
+</SpeciesSynonym>
+<rdf:Description rdf:about="species/1">
+ <hasSynonym rdf:resource="species/152"/>
+</rdf:Description>
+</rdf:RDF>
