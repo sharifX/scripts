@@ -1,0 +1,683 @@
+{
+    "@context": [
+        "https://stuchalk.github.io/scidata/contexts/scidata.jsonld",
+        "https://stuchalk.github.io/scidata/contexts/dissco.jsonld",
+        {
+            "sdo": "https://stuchalk.github.io/scidata/ontology/scidata.owl#",
+            "obo": "http://purl.obolibrary.org/obo/",
+            "fdf": "https://go-fair.org/ontology/fdf.owl#",
+            "dc": "http://purl.org/dc/terms/",
+            "dwc": "https://dwc.tdwg.org/terms/",
+            "abcd": "https://abcd.tdwg.org/3.0/",
+            "dissco": "https://www.dissco.eu/ontology/dissco_v1#"
+        },
+        {"@base": "https://www.dissco.eu/specimens/20.5000.1025/59cb26e5bc4c983fb848/"}
+    ],
+    "@id": "https://www.dissco.eu/specimens/20.5000.1025/59cb26e5bc4c983fb848/",
+    "operations": [
+        {
+            "@id": "operation/1/",
+            "@type": "fdf:operation",
+            "action": "get_datatype",
+            "value": ["FAIRSpecimen"]
+        },
+        {
+            "@id": "operation/1/",
+            "@type": "fdf:operation",
+            "action": "get_inventory",
+            "sources": ["@graph/toc"]
+        },
+        {
+            "@id": "operation/2/",
+            "@type": "fdf:operation",
+            "action": "get_descriptors",
+            "sources": ["@graph/ids"]
+        },
+        {
+            "@id": "operation/3/",
+            "@type": "fdf:operation",
+            "action": "get_specimen",
+            "sources": ["@graph/scidata/system/specimen/1/"]
+        },
+        {
+            "@id": "operation/4/",
+            "@type": "fdf:operation",
+            "action": "get_sources",
+            "sources": ["@graph/sources/"]
+        },
+        {
+            "@id": "operation/5/",
+            "@type": "fdf:operation",
+            "action": "get_rights",
+            "sources": ["@graph/rights/"]
+        }
+    ],
+    "@graph": {
+        "@id": "record/NHMUK/20.5000.1025/59cb26e5bc4c983fb848/",
+        "@type": "sdo:sdfile",
+        "pid": "specimen:NHMUK:013258549",
+        "title": "FAIR Digital Specimen - Holorchis castex",
+        "description": "Digital specimen of a specimen of Holorchis castex",
+        "publisher": "Natural History Museum - UK",
+        "creationdate": "2019-10-17T14:37:57.877Z",
+        "keywords": [
+            "FAIR specimen",
+            "Holocros castex"
+        ],
+        "ids": ["obo:NCBITaxon_681679"],
+        "toc": [
+            "dissco:specimen",
+            "dissco:occurrenceRecord"
+        ],
+        "history": [
+            {
+                "@id": "event/1/",
+                "@type": "sci:event",
+                "timestamp": "2019-09-03T14:06:33+00:00",
+                "version": 1,
+                "action": "creation",
+                "notes": "Created example FAIR specimen file created by Stuart Chalk",
+                "additions": ["specimen/1/"]
+            },
+            {
+                "@id": "event/2/",
+                "@type": "sci:event",
+                "timestamp": "2019-09-03T14:06:33+00:00",
+                "version": 1,
+                "action": "update",
+                "notes": "Added example FAIR GBIF, Catalog of Life, Plazi, and EMBl ENA entries - Stuart Chalk",
+                "additions": [
+                    "occurrence/1/",
+                    "species/1/",
+                    "treatment/1/",
+                    "sequence/1/",
+                    "source/7/",
+                    "sequence/8/"
+                ]
+            }
+        ],
+        "scidata": [
+            {
+                "@id": "scidata",
+                "@type": "sdo:scientificData",
+                "discipline": "chemistry",
+                "system": {
+                    "@id": "system/",
+                    "@type": "sdo:system",
+                    "facets": [
+                        {
+                            "@id": "specimen/1/",
+                            "@type": "dissco:specimenRecord",
+                            "source": "source/2/",
+                            "name": "Holorchis castex",
+                            "creator": "admin",
+                            "midslevel": 2,
+                            "scientificName": "Holorchis castex New Look",
+                            "country": "New Caledonia",
+                            "locality": "Rocher a la voile",
+                            "recordedBy": "J L. Justine",
+                            "collectionDate": "2006-06-01",
+                            "catalogNumber": "2006.12.6.40-41",
+                            "otherCatalogNumbers": "NHMUK:ecatalogue:7072219",
+                            "institutionCode": "NHMUK",
+                            "collectionCode": "ZOO",
+                            "stableIdentifier": "https://data.nhm.ac.uk/object/e90b81bc-1642-47ca-b587-6aa8885cd6a0/1558569600000",
+                            "physicalSpecimenId": "013258549",
+                            "locationLatLong": [
+                                -22.3,
+                                166.42
+                            ],
+                            "annotations": "yes",
+                            "supplementalInfo": {
+                                "@id": "specimen/1/supplementalinfo/",
+                                "@type": "gbif:supplementalInfo",
+                                "gbifOccurence": "https://www.gbif.org/occurrence/1826086349",
+                                "catalogOfLifeEntry": "http://www.catalogueoflife.org/col/details/species/id/828cbc4eecaa2402b09cd9223754171e",
+                                "treatment": "http://treatment.plazi.org/id/03BA8782-5543-FFBF-D895-FD27FAE1DDAD",
+                                "sequence": "https://www.ebi.ac.uk/ena/data/view/FJ788436",
+                                "literatureReference": [
+                                    "https://doi.org/10.5281/zenodo.175744",
+                                    "https://doi.org/10.2478/s11686-009-0045-z"
+                                ]
+                            }
+                        },
+                        {
+                            "@id": "occurrence/1/",
+                            "@type": "dissco:occurrenceRecord",
+                            "source": "source/3/",
+                            "key": 1826086349,
+                            "datasetKey": "7e380070-f762-11e1-a439-00145eb45e9a",
+                            "publishingOrgKey": "19456090-b49a-11d8-abeb-b8a03c50a862",
+                            "installationKey": "60277b56-f762-11e1-a439-00145eb45e9a",
+                            "publishingCountry": "GB",
+                            "protocol": "DWC_ARCHIVE",
+                            "lastCrawled": "2020-05-07T21:35:24.050+0000",
+                            "lastParsed": "2020-05-08T01:09:47.529+0000",
+                            "crawlId": 163,
+                            "extensions": {},
+                            "basisOfRecord": "PRESERVED_SPECIMEN",
+                            "individualCount": 2,
+                            "taxonKey": 5890922,
+                            "kingdomKey": 1,
+                            "phylumKey": 108,
+                            "classKey": 345,
+                            "orderKey": 434,
+                            "familyKey": 7392398,
+                            "genusKey": 4346132,
+                            "speciesKey": 5890922,
+                            "acceptedTaxonKey": 5890922,
+                            "scientificName": "Holorchis castex Bray & Justine, 2007",
+                            "acceptedScientificName": "Holorchis castex Bray & Justine, 2007",
+                            "kingdom": "Animalia",
+                            "phylum": "Platyhelminthes",
+                            "order": "Plagiorchiida",
+                            "family": "Aephnidiogenidae",
+                            "genus": "Holorchis",
+                            "species": "Holorchis castex",
+                            "genericName": "Holorchis",
+                            "specificEpithet": "castex",
+                            "taxonRank": "SPECIES",
+                            "taxonomicStatus": "ACCEPTED",
+                            "decimalLongitude": 166.42,
+                            "decimalLatitude": -22.3,
+                            "continent": "OCEANIA",
+                            "stateProvince": "Sud",
+                            "waterBody": "Coral Sea",
+                            "year": 2006,
+                            "month": 6,
+                            "day": 1,
+                            "eventDate": "2006-06-01T00:00:00",
+                            "typeStatus": "PARATYPE",
+                            "issues": ["GEODETIC_DATUM_ASSUMED_WGS84"],
+                            "lastInterpreted": "2020-05-08T01:09:47.529+0000",
+                            "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "identifiers": [],
+                            "media": [],
+                            "facts": [],
+                            "relations": [],
+                            "geodeticDatum": "WGS84",
+                            "class": "Trematoda",
+                            "countryCode": "NC",
+                            "recordedByIDs": [],
+                            "identifiedByIDs": [],
+                            "country": "New Caledonia",
+                            "identifier": "7072219",
+                            "recordedBy": "J L. Justine",
+                            "catalogNumber": "2006.12.6.40-41",
+                            "otherCatalogNumbers": "NHMUK:ecatalogue:7072219",
+                            "higherGeography": "Oceania; New Caledonia; Sud; Nouméa",
+                            "institutionCode": "NHMUK",
+                            "dynamicProperties": "{\"kindofobject\": \"Spirit\", \"gbifissue\": [\"GEODETIC_DATUM_ASSUMED_WGS84\"], \"created\": 1483970313000, \"barcode\": \"013258549\", \"gbifid\": 1826086349, \"project\": \"AoI\", \"determinationnames\": \"Holorchis castex Bray & Justine\", \"subdepartment\": \"Parasitic Worms\"}",
+                            "locality": "Rocher a la voile",
+                            "collectionCode": "ZOO",
+                            "gbifID": "1826086349",
+                            "occurrenceID": "e90b81bc-1642-47ca-b587-6aa8885cd6a0",
+                            "higherClassification": "Animalia; Platyhelminthes; Trematoda; Digenea"
+                        },
+                        {
+                            "@id": "species/1/",
+                            "@type": "dissco:speciesRecord",
+                            "source": "source/4/",
+                            "id": "828cbc4eecaa2402b09cd9223754171e",
+                            "name": "Holorchis castex",
+                            "rank": "Species",
+                            "name_status": "accepted name",
+                            "genus": "Holorchis",
+                            "subgenus": "",
+                            "species": "castex",
+                            "infraspecies_marker": "",
+                            "infraspecies": "",
+                            "author": "Bray & Justine, 2007",
+                            "record_scrutiny_date": {"scrutiny": "2013-11-18"},
+                            "online_resource": "http://www.marinespecies.org/aphia.php?p=taxdetails&id=594684",
+                            "is_extinct": "false",
+                            "source_database": "WoRMS Trematoda: World List of Trematoda",
+                            "source_database_url": "http://www.marinespecies.org",
+                            "bibliographic_citation": "Cribb T. & Gibson D. (2020). WoRMS Trematoda: World List of Trematoda (version 2019-03-06). In: Species 2000 & ITIS Catalogue of Life, 2020-02-24 (Roskov Y., Ower G., Orrell T., Nicolson D., Bailly N., Kirk P.M., Bourgoin T., DeWalt R.E., Decock W., Nieukerken E. van, Penev L.). Digital resource at www.catalogueoflife.org/col. Species 2000: Naturalis, Leiden, the Netherlands. ISSN 2405-8858.",
+                            "name_html": "<i>Holorchis castex<\/i> Bray & Justine, 2007",
+                            "url": "http://www.catalogueoflife.org/col/details/species/id/828cbc4eecaa2402b09cd9223754171e",
+                            "distribution": "New Caledonia 588 0",
+                            "references": [
+                                {
+                                    "author": "Bray, R. A.; Justine, J.-L.",
+                                    "year": "2007",
+                                    "title": "Holorchis castex n. sp. (Digenea : Lepocreadiidae) from the painted sweet-lips Diagramma pictum (Thunberg, 1792) (Perciformes : Haemulidae) from New Caledonia",
+                                    "source": "Zootaxa. 1426, 51-56"
+                                }
+                            ],
+                            "classification": [
+                                {
+                                    "id": "5ede24b0534ebd5e1f552d5b9f874a6a",
+                                    "name": "Animalia",
+                                    "rank": "Kingdom",
+                                    "name_html": "Animalia",
+                                    "url": "http://www.catalogueoflife.org/col/browse/tree/id/5ede24b0534ebd5e1f552d5b9f874a6a"
+                                },
+                                {
+                                    "id": "7253b0d111fd5eb0c6a9856e0d8d1cad",
+                                    "name": "Platyhelminthes",
+                                    "rank": "Phylum",
+                                    "name_html": "Platyhelminthes",
+                                    "url": "http://www.catalogueoflife.org/col/browse/tree/id/7253b0d111fd5eb0c6a9856e0d8d1cad"
+                                },
+                                {
+                                    "id": "d42c1a9f3fd079134f6e4010e8309ac8",
+                                    "name": "Trematoda",
+                                    "rank": "Class",
+                                    "name_html": "Trematoda",
+                                    "url": "http://www.catalogueoflife.org/col/browse/tree/id/d42c1a9f3fd079134f6e4010e8309ac8"
+                                },
+                                {
+                                    "id": "4164a15aeb900bb780ea6cc10a3dbe2c",
+                                    "name": "Plagiorchiida",
+                                    "rank": "Order",
+                                    "name_html": "Plagiorchiida",
+                                    "url": "http://www.catalogueoflife.org/col/browse/tree/id/4164a15aeb900bb780ea6cc10a3dbe2c"
+                                },
+                                {
+                                    "id": "e8f48063ec8a5e7a62eef86d0a626575",
+                                    "name": "Lepocreadioidea",
+                                    "rank": "Superfamily",
+                                    "name_html": "Lepocreadioidea",
+                                    "url": "http://www.catalogueoflife.org/col/browse/tree/id/e8f48063ec8a5e7a62eef86d0a626575"
+                                },
+                                {
+                                    "id": "4b4195da4affbe993aa16cb7f74e3aa9",
+                                    "name": "Aephnidiogenidae",
+                                    "rank": "Family",
+                                    "name_html": "Aephnidiogenidae",
+                                    "url": "http://www.catalogueoflife.org/col/browse/tree/id/4b4195da4affbe993aa16cb7f74e3aa9"
+                                },
+                                {
+                                    "id": "c92ffc6a8df6a4364352aded2542362e",
+                                    "name": "Holorchis",
+                                    "rank": "Genus",
+                                    "name_html": "<i>Holorchis<\/i>",
+                                    "url": "http://www.catalogueoflife.org/col/browse/tree/id/c92ffc6a8df6a4364352aded2542362e"
+                                }
+                            ],
+                            "child_taxa": [],
+                            "synonyms": [],
+                            "common_names": []
+                        },
+                        {
+                            "@id": "treatment/1/",
+                            "@type": "dissco:treatmentRecord",
+                            "source": "source/5/",
+                            "sourceref": {
+                                "@id": "source/2/",
+                                "@type": [
+                                    "plazi:publishedIn",
+                                    "fabio:JournalArticle"
+                                ],
+                                "title": "Holorchis castex n. sp. (Digenea: Lepocreadiidae) from the painted sweet-lips Diagramma pictum (Thunberg, 1792) (Perciformes: Haemulidae) from New Caledonia",
+                                "creator": [
+                                    "Bray, Rodney A.",
+                                    "Justine, Jean-Lou"
+                                ],
+                                "journal": "Zootaxa",
+                                "year": "2007",
+                                "volume": "1426",
+                                "pageStart": "51",
+                                "pageEnd": "56"
+                            },
+                            "taxon": {
+                                "@id": "taxon/1/",
+                                "@type": [
+                                    "plazi:definesTaxonConcept",
+                                    "http://filteredpush.org/ontologies/oa/dwcFP#Taxon"
+                                ],
+                                "box": "[151,354,658,684]",
+                                "class": "Trematoda",
+                                "family": "Lepocreadiidae",
+                                "genus": "Holorchis",
+                                "kingdom": "Animalia",
+                                "order": "Plagiorchiida",
+                                "pageId": "1",
+                                "pageNumber": "52",
+                                "phylum": "Platyhelminthes",
+                                "rank": "species",
+                                "species": "castex",
+                                "status": "n. sp."
+                            },
+                            "sections": [
+                                {
+                                    "@id": "section/1/",
+                                    "@type": "smp:InfoItem",
+                                    "content": "Type-host:  Diagramma pictum(Thunberg, 1792), Haemulidae, painted sweet-lips.  Site:Digestive tract.  Type-locality:Rocher à la voile, Nouméa, New Caledonia (22° 18\u2019 30\u2019\u2019S,  166° 25\u2019 50\u2019\u2019E, 01/06/ 2006).  Prevalence: 1 of 1 (100%).  Intensity: 6.  Type-specimens:  holotype MNHN JNC 1848\u2013D 1,  paratypes MNHN JNC 1848\u2013D 2\u20133, BMNH 2006.12.6.40\u201341"
+                                },
+                                {
+                                    "@id": "section/2/",
+                                    "@type": "smp:InfoItem",
+                                    "content": "Etymology:\u2018Castex\u2019 or \u2018loche castex\u2019 is the common name of the host in New Caledonia( Laboute & Grandperrin 2000)."
+                                },
+                                {
+                                    "@id": "section/3/",
+                                    "@type": "smp:InfoItem",
+                                    "content": "Description. Based on five specimens. Body elongate, large;  6,793\u20138,577 × 1,145 1,438 (7,569 × 1,317); width 16.8\u201318.4 (17.4)% of body-length (Figure 1). Tegument spinous to posterior extremity, sparser in hindbody. Pre-oral lobe distinct, 42\u201366 (51) long. Oral sucker subglobular, subterminal, with distinct groove in dorsal margin; 401\u2013463 × 418\u2013500 (422 × 456) (Figure 4). Ventral sucker rounded, in anterior third of body; 349\u2013419 × 332\u2013416 (382 × 375). Forebody  1,998\u20132,376 (2,149) long; 27.7\u201329.4 (28.4)% of body-length. Sucker-ratios: length 1: 0.87\u20130.94 (0.91); width 1: 0.79\u20130.86 (0.82). Prepharynx short; mainly within posterior concavity of oral sucker, reaching 0\u201316 (11) posterior to oral sucker. Pharynx large, doliiform; 211\u2013288 × 218\u2013278 (250 × 246). Pharynx: oral sucker ratio 1: 1.64\u20131.93 (1.86). Oesophagus short; 63\u2013225 (141) long. Intestinal bifurcation in anterior forebody,  1,230\u20131,505 (1,327) from ventral sucker. Caeca long, narrow, apparently terminate blindly near posterior extremity, terminations obscured by vitellarium, post-caecal distance approximately 249\u2013440 (342). Testes 2, entire, oval, almost tandem, contiguous or slightly separated, just in anterior half of hindbody; anterior 498\u2013652 × 407\u2013556 (581 × 508); posterior 509\u2013699 × 468\u2013590 (640 × 524). Intertesticular distance 0\u2013151 (66); 0\u20131.76 (0.83)% of body-length. Post-testicular distance  2,407\u20133,022 (2,673); 33.5\u201337.0 (35.3)% of body-length. External seminal vesicle long, convoluted, reaches dorsal to about mid-level of ventral sucker. Cirrus-sac oval, thick-walled with distinct layer of gland-cells between outer wall and male-duct (Figure 2). Internal seminal vesicle long, slightly undulating, with thickened muscular wall; 405\u2013471 × 248\u2013551 (442 × 284). Pars prostatica vesicular, subglobular, with thick wall, sparsely lined with anuclear cell-like bodies. Ejaculatory duct short, muscular, may be extended through genital pore as cirrus. Genital atrium distinct, thick-walled. Genital pore submedian, well anterior to ventral sucker. Ovary oval, entire, 349\u2013429 × 220\u2013323 (400 × 271); 628\u2013894 (764) (9.59\u201310.8 (9.91)% of body-length) pre-testicular, separated from anterior testis by bulk of uterus, 56\u2013136 (89) (0.73\u20131.58 (1.16)% of bodylength) from ventral sucker. Seminal receptacle oval, postero-median to ovary. Laurer\u2019s canal opens dorsally median to ovary (Figure 5). Mehlis\u2019 gland median to ovary. Uterus intercaecal, overlaps anterior testis, narrows at level of ovary, loops dorsally to ventral sucker. Metraterm about half length of cirrus-sac, with slightly thickened wall, runs dorsally to cirrus-sac (Figure 3). Eggs tanned, operculate, extremely numerous, 75\u201387 × 27\u201333 (80 × 31). Vitellarium follicular, fields reach well into forebody, 380\u2013688 (542) anterior to ventral sucker, and close to posterior extremity, mainly lateral, dorsal and ventral to caeca, confluent dorsal and ventral in post-testicular region. Vitelline reservoir ventral to posterior part of ovary. Excretory pore terminal. Excretory vesicle I-shaped, passes sinistrally to posterior testis, dextrally to anterior testis, not traced beyond anterior testis, but presumably terminates somewhere dorsally to uterus."
+                                }
+                            ],
+                            "materials": [
+                                {
+                                    "@id": "material/1/",
+                                    "@type": [
+                                        "plazi:hasMaterialCitation",
+                                        "cito:citesAsEvidence"
+                                    ],
+                                    "box": "[432,840,968,994]",
+                                    "collectionCode": "MNHN",
+                                    "isTailEnumeration": "true",
+                                    "pageId": "1",
+                                    "pageNumber": "52",
+                                    "specimenCode": "JNC1848-D1",
+                                    "specimenCount": "1",
+                                    "typeStatus": "holotype"
+                                },
+                                {
+                                    "@id": "material/2/",
+                                    "@type": [
+                                        "plazi:hasMaterialCitation",
+                                        "cito:citesAsEvidence"
+                                    ],
+                                    "collectionCode": "MNHN, BMNH",
+                                    "httpUri": "https://data.nhm.ac.uk/dataset/56e711e6-c847-4f99-915a-6894bb5c5dea/resource/05ff2255-c38a-40c9-b657-4ccb55ab2feb/record/7072219",
+                                    "isTailEnumeration": "true",
+                                    "pageId": "1",
+                                    "pageNumber": "52",
+                                    "specimenCode": "JNC1848-D2-3, 2006.12.6.40-41",
+                                    "specimenCount": "1",
+                                    "typeStatus": "paratype"
+                                }
+                            ],
+                            "figures": [
+                                {
+                                    "@id": "figure/1/",
+                                    "@type": "fabio:hasPart",
+                                    "figure": "https://zenodo.org/record/175745/files/figure.png"
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "sequence/1/",
+                            "@type": "dissco:sequenceRecord",
+                            "source": "source/6/",
+                            "accession": "FJ788436",
+                            "version": "1",
+                            "entryVersion": "2",
+                            "dataClass": "STD",
+                            "taxonomicDivision": "INV",
+                            "moleculeType": "genomic DNA",
+                            "sequenceLength": "459",
+                            "topology": "linear",
+                            "firstPublic": "2009-11-06",
+                            "firstPublicRelease": "102",
+                            "lastUpdated": "2019-05-03",
+                            "lastUpdatedRelease": "140",
+                            "description": "Holorchis castex NADH dehydrogenase subunit 1 (ND1) gene, partial cds; mitochondrial",
+                            "references": [
+                                {
+                                    "@id": "reference/1/",
+                                    "@type": "ena:article",
+                                    "title": "The phylogeny of the Lepocreadiidae (Platyhelminthes: Digenea) inferred from nuclear and mitochondrial genes: implications for their systematics and evolution",
+                                    "author": [
+                                        "Bray R.A.",
+                                        "Waeschenbach A.",
+                                        "Cribb T.H.",
+                                        "Weedall G.D.",
+                                        "Dyal P.",
+                                        "Littlewood D.T.J."
+                                    ],
+                                    "journal": "Acta Parasitol.",
+                                    "year": "2009",
+                                    "volume": "54",
+                                    "firstPage": "310",
+                                    "lastPage": "329",
+                                    "referenceLocation": "Acta Parasitol. 54:310-329(2009)"
+                                },
+                                {
+                                    "@id": "reference/2/",
+                                    "@type": "ena:submission",
+                                    "author": [
+                                        "Bray R.A.",
+                                        "Waeschenbach A.",
+                                        "Cribb T.H.",
+                                        "Weedall G.D.",
+                                        "Dyal P.",
+                                        "Littlewood D.T.J."
+                                    ],
+                                    "submissionDate": "2009-02-24",
+                                    "referenceLocation": "Submitted (24-FEB-2009) to the INSDC. Department of Zoology, The Natural History Museum, Cromwell Road, London, England SW7 5BD, United Kingdom"
+                                }
+                            ],
+                            "features": [
+                                {
+                                    "@id": "feature/1/",
+                                    "@type": "ena:feature",
+                                    "type": "source",
+                                    "location": "1..459",
+                                    "taxon": {
+                                        "@id": "taxon/1/",
+                                        "@type": "ena:taxon",
+                                        "scientificName": "Holorchis castex",
+                                        "taxId": "681679",
+                                        "lineage": [
+                                            {
+                                                "@id": "lineage/1/",
+                                                "@type": "ena:lineage",
+                                                "part": "Eukaryota"
+                                            },
+                                            {
+                                                "@id": "lineage/2/",
+                                                "@type": "ena:lineage",
+                                                "part": "Metazoa"
+                                            },
+                                            {
+                                                "@id": "lineage/3/",
+                                                "@type": "ena:lineage",
+                                                "part": "Spiralia"
+                                            },
+                                            {
+                                                "@id": "lineage/4/",
+                                                "@type": "ena:lineage",
+                                                "part": "Lophotrochozoa"
+                                            },
+                                            {
+                                                "@id": "lineage/5/",
+                                                "@type": "ena:lineage",
+                                                "part": "Platyhelminthes"
+                                            },
+                                            {
+                                                "@id": "lineage/6/",
+                                                "@type": "ena:lineage",
+                                                "part": "Trematoda"
+                                            },
+                                            {
+                                                "@id": "lineage/7/",
+                                                "@type": "ena:lineage",
+                                                "part": "Digenea"
+                                            },
+                                            {
+                                                "@id": "lineage/8/",
+                                                "@type": "ena:lineage",
+                                                "part": "Plagiorchiida"
+                                            },
+                                            {
+                                                "@id": "lineage/9/",
+                                                "@type": "ena:lineage",
+                                                "part": "Lepocreadiata"
+                                            },
+                                            {
+                                                "@id": "lineage/10/",
+                                                "@type": "ena:lineage",
+                                                "part": "Lepocreadioidea"
+                                            },
+                                            {
+                                                "@id": "lineage/11/",
+                                                "@type": "ena:lineage",
+                                                "part": "Lepocreadiidae"
+                                            },
+                                            {
+                                                "@id": "lineage/12/",
+                                                "@type": "ena:lineage",
+                                                "part": "Holorchis"
+                                            }
+                                        ]
+                                    },
+                                    "qualifiers": [
+                                        {
+                                            "@id": "qualifier/1/",
+                                            "@type": "ena:qualifier",
+                                            "name": "organism",
+                                            "value": "Holorchis castex"
+                                        },
+                                        {
+                                            "@id": "qualifier/2/",
+                                            "@type": "ena:qualifier",
+                                            "name": "organelle",
+                                            "value": "mitochondrion"
+                                        },
+                                        {
+                                            "@id": "qualifier/3/",
+                                            "@type": "ena:qualifier",
+                                            "name": "host",
+                                            "value": "Diagramma picta"
+                                        },
+                                        {
+                                            "@id": "qualifier/4/",
+                                            "@type": "ena:qualifier",
+                                            "name": "country",
+                                            "value": "New Caledonia"
+                                        },
+                                        {
+                                            "@id": "qualifier/5/",
+                                            "@type": "ena:qualifier",
+                                            "name": "specimen_voucher",
+                                            "value": "BMNH:2006.12.6.4041"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@id": "feature/2/",
+                                    "@type": "ena:feature",
+                                    "type": "gene",
+                                    "location": "<1..>459",
+                                    "gene": "ND1"
+                                },
+                                {
+                                    "@id": "feature/3/",
+                                    "@type": "ena:feature",
+                                    "type": "CDS",
+                                    "location": "<1..>459",
+                                    "goaid": "D0QTK0",
+                                "interproid": "IPR001694",
+                                "uniprotid": "D0QTK0",
+                                "qualifiers": [
+                                    {
+                                        "@id": "qualifier/1/",
+                                        "@type": "ena:qualifier",
+                                        "name": "codon_start",
+                                        "value": "1"
+                                    },
+                                    {
+                                        "@id": "qualifier/2/",
+                                        "@type": "ena:qualifier",
+                                        "name": "transl_table",
+                                        "value": "9"
+                                    },
+                                    {
+                                        "@id": "qualifier/3/",
+                                        "@type": "ena:qualifier",
+                                        "name": "gene",
+                                        "value": "ND1"
+                                    },
+                                    {
+                                        "@id": "qualifier/4/",
+                                        "@type": "ena:qualifier",
+                                        "name": "product",
+                                        "value": "NADH dehydrogenase subunit 1"
+                                    },
+                                    {
+                                        "@id": "qualifier/5/",
+                                        "@type": "ena:qualifier",
+                                        "name": "protein_id",
+                                        "value": "ACY41176.1"
+                                    },
+                                    {
+                                        "@id": "qualifier/6/",
+                                        "@type": "ena:qualifier",
+                                        "name": "translation",
+                                        "value": "GLLQSFADLLXLIIKFKIAFFQARSWLSWGGVLLLVFLSCSYCLIFAFCQSGQSNQTVLLWLLVITSLTGYSLLSVGWGSYNKYALVSCVRSAFGSISFEAVFMCVVIMVGLLWGGYYSFPGVEHSWMLLLVSPLLYAVWLVGILCECNRTPL"
+                                    }
+                                ]
+                            }
+                            ],
+                            "sequence": "ggtttattgcagaggtttgcggacttattgangttgattattaagtttaagattgctttttttcaggcgcgtaggtggctgtcttggggaggggtgcttttgttagttttcttgtcttgtaggtattgtcttatttttgctttttgtcagaggggtcagagtaatcagactgtgctgttgtggcttttggttattactagtttaactggttatagattgcttagtgttgggtgaggatcatataataagtatgctttggtgagttgtgttcggtctgcgtttggctctataaggtttgaggctgtttttatgtgtgttgttattatggttgggctgctgtgagggggttattattcttttcccggggttgagcattcttgaatgttgctgttggtttcaccgctgttgtatgctgtttggcttgtaggtatactttgtgagtgcaaccgaactccattg"
+                        }
+                    ]
+                }
+            }
+        ],
+        "sources": [
+            {
+                "@id": "source/1/",
+                "@type": "sci:source",
+                "citation": "DiSSCo Specimen entry",
+                "url": "https://www.dissco.eu/specimens/20.5000.1025/59cb26e5bc4c983fb848/",
+                "type": "fair digital object"
+            },
+            {
+                "@id": "source/2/",
+                "@type": "sci:source",
+                "citation": "NHMUK Specimen Record",
+                "url": "https://data.nhm.ac.uk/object/e90b81bc-1642-47ca-b587-6aa8885cd6a0/1558569600000"
+            },
+            {
+                "@id": "source/3/",
+                "@type": "sci:source",
+                "citation": "GBIF Occurence Record",
+                "url": "https://www.gbif.org/occurrence/1826086349",
+                "apiurl": "https://api.gbif.org/v1/occurrence/1826086349"
+            },
+            {
+                "@id": "source/4/",
+                "@type": "sci:source",
+                "citation": "Catlogue of Life Species Record",
+                "url": "http://www.catalogueoflife.org/col/details/species/id/828cbc4eecaa2402b09cd9223754171e",
+                "apiurl": "http://webservice.catalogueoflife.org/col/webservice?id=828cbc4eecaa2402b09cd9223754171e&format=json&response=full"
+            },
+            {
+                "@id": "source/5/",
+                "@type": "sci:source",
+                "citation": "Plazi Treatment Record",
+                "url": "http://treatment.plazi.org/id/03BA87825543FFBFD895FD27FAE1DDAD",
+                "apiurl": "http://tb.plazi.org/GgServer/rdf/03BA8782-5543-FFBF-D895-FD27FAE1DDAD"
+            },
+            {
+                "@id": "source/6/",
+                "@type": "sci:source",
+                "citation": "EBI European Nucleotide Archive",
+                "url": "https://www.ebi.ac.uk/ena/data/view/FJ788436",
+                "apiurl": "https://www.ebi.ac.uk/ena/data/view/FJ788436%26display%3Dxml"
+            },
+            {
+                "@id": "source/7/",
+                "@type": "sci:source",
+                "doi": "https://doi.org/10.5281/zenodo.175744"
+            },
+            {
+                "@id": "source/8/",
+                "@type": "sci:source",
+                "doi": "https://doi.org/10.2478/s11686-009-0045-z"
+            }
+        ],
+        "rights": [
+            {
+                "@id": "rights/1/",
+                "@type": "sci:rights",
+                "holder": "Distributed System of Scientific Collections Project",
+                "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+                "url": "https://www.dissco.eu"
+            }
+        ]
+    }
+}
