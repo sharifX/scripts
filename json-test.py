@@ -1,6 +1,6 @@
 # Simple json parser to understand the data structure 
 import urllib2, json
-url  = urllib2.urlopen('https://bloodhound-tracker.net/0000-0001-7618-5230/specimens.json')
+url  = urllib2.urlopen('https://bionomia.net/0000-0001-7618-5230/specimens.json')
 data = json.load(url)
 
 
